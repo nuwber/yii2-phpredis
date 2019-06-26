@@ -97,7 +97,7 @@ class CacheTest extends TestCase
         $this->assertEquals('v1', $cache->get('k1'));
         $this->assertEquals('v2', $cache->get('k2'));
         $this->assertEquals('v3', $cache->get('k3'));
-        sleep(1);
+        usleep(1100000);
         $this->assertFalse($cache->get('k1'));
         $this->assertFalse($cache->get('k2'));
         $this->assertFalse($cache->get('k3'));
@@ -107,7 +107,6 @@ class CacheTest extends TestCase
         $this->assertFalse($cache->exists('k3'));
 
         $cache->multiSet($items);
-        sleep(2);
         $this->assertEquals('v1', $cache->get('k1'));
         $this->assertEquals('v2', $cache->get('k2'));
         $this->assertEquals('v3', $cache->get('k3'));
@@ -118,7 +117,7 @@ class CacheTest extends TestCase
         $cache = $this->getCacheInstance();
         $cache->set('key', 'val', 1);
         $this->assertEquals('val', $cache->get('key'));
-        sleep(1);
+        usleep(1100000);
         $this->assertFalse($cache->get('key'));
         $this->assertFalse($cache->exists('key'));
 
@@ -150,7 +149,7 @@ class CacheTest extends TestCase
             'k1' => 'v1',
         ], 1));
         $this->assertEquals('vv55', $cache->get('k5'));
-        sleep(1);
+        usleep(1100000);
         $this->assertFalse($cache->exists('k5'));
         $this->assertTrue($cache->exists('k1'));
     }

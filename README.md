@@ -4,14 +4,7 @@ This extension provides the [redis](http://redis.io/) key-value store support fo
 
 It includes a `Cache` and `Session` storage handler in redis.
 
-
-[![Build Status](https://travis-ci.org/dcb9/yii2-phpredis.svg?branch=master)](https://travis-ci.org/dcb9/yii2-phpredis)
-[![Code Climate](https://codeclimate.com/github/dcb9/yii2-phpredis/badges/gpa.svg)](https://codeclimate.com/github/dcb9/yii2-phpredis)
-[![Test Coverage](https://codeclimate.com/github/dcb9/yii2-phpredis/badges/coverage.svg)](https://codeclimate.com/github/dcb9/yii2-phpredis/coverage)
-[![Issue Count](https://codeclimate.com/github/dcb9/yii2-phpredis/badges/issue_count.svg)](https://codeclimate.com/github/dcb9/yii2-phpredis)
-[![Latest Stable Version](https://poser.pugx.org/dcb9/yii2-phpredis/version)](https://packagist.org/packages/dcb9/yii2-phpredis)
-[![Total Downloads](https://poser.pugx.org/dcb9/yii2-phpredis/downloads)](https://packagist.org/packages/dcb9/yii2-phpredis)
-[![License](https://poser.pugx.org/dcb9/yii2-phpredis/license)](https://packagist.org/packages/dcb9/yii2-phpredis)
+[![Build Status](https://travis-ci.org/nuwber/yii2-phpredis.svg?branch=master)](https://travis-ci.org/nuwber/yii2-phpredis)
 
 **Notice: THIS REPO DOES NOT SUPPORT ACTIVE RECORD.**
 
@@ -42,15 +35,20 @@ To use this extension, you have to configure the Connection class in your applic
 
 ```php
 return [
-    //....
     'components' => [
         'redis' => [
-            'class' => 'dcb9\redis\Connection',
+            'class' => \dcb9\redis\Connection::class,
             'hostname' => 'localhost',
             'port' => 6379,
             'database' => 0,
         ],
-    ]
+        'cache' => [
+            'class' => \dcb9\redis\Cache::class,
+        ],
+        'session' => [
+            'class' => \dcb9\redis\Session::class,
+        ],
+    ],
 ];
 ```
 
@@ -59,22 +57,14 @@ Run unit test
 
 You can specific your redis config
 
-```
+```bash
 $ cp tests/config.php tests/config-local.php
-$ vim tests/config-local.php
 ```
 
 and Run
 
-```
+```bash
 $ ./vendor/bin/phpunit
-PHPUnit 5.6.1 by Sebastian Bergmann and contributors.
-
-............                           12 / 12 (100%)
-
-Time: 600 ms, Memory: 10.00MB
-
-OK (12 tests, 50 assertions)
 ```
 
 Performance test
