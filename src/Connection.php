@@ -65,15 +65,6 @@ class Connection extends Redis implements Configurable
     }
 
     /**
-     * Returns the fully qualified name of this class.
-     * @return string the fully qualified name of this class.
-     */
-    public static function className()
-    {
-        return get_called_class();
-    }
-
-    /**
      * Establishes a DB connection.
      * It does nothing if a DB connection has already been established.
      * @throws RedisException if connection fails
@@ -123,7 +114,7 @@ class Connection extends Redis implements Configurable
         return parent::ping() === '+PONG';
     }
 
-    public function flushdb()
+    public function flushdb($async = null)
     {
         return parent::flushDB();
     }

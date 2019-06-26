@@ -56,3 +56,17 @@ for ($i = 0; $i < $count; $i++) {
     $yiiRedis->get('yii_redis_prefix' . $i);
 }
 echo " " . ((microtime(true) - $start) * 1000) . " micro seconds.\n";
+
+echo "phpredis run DEL $count times in";
+$start = microtime(true);
+for ($i = 0; $i < $count; $i++) {
+    $phpRedis->del('php_redis_prefix' . $i);
+}
+echo " " . ((microtime(true) - $start) * 1000) . " micro seconds.\n";
+
+echo "yii redis run DEL $count times in";
+$start = microtime(true);
+for ($i = 0; $i < $count; $i++) {
+    $yiiRedis->del('yii_redis_prefix' . $i);
+}
+echo " " . ((microtime(true) - $start) * 1000) . " micro seconds.\n";
