@@ -77,7 +77,7 @@ class Session extends \yii\web\Session
             $this->redis = Yii::$app->get($this->redis);
         } elseif (is_array($this->redis)) {
             if (!isset($this->redis['class'])) {
-                $this->redis['class'] = Connection::className();
+                $this->redis['class'] = Connection::class;
             }
             $this->redis = Yii::createObject($this->redis);
         }

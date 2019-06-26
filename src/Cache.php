@@ -23,10 +23,9 @@ class Cache extends \yii\caching\Cache
     public function init()
     {
         parent::init();
-        $this->redis = Instance::ensure($this->redis, Connection::className());
+        $this->redis = Instance::ensure($this->redis, Connection::class);
         $this->redis->open();
     }
-
 
     /**
      * @inheritdoc
