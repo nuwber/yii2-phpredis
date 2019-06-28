@@ -8,7 +8,7 @@ if (file_exists(__DIR__ . '/config-local.php')) {
     $param = include(__DIR__ . '/config.php');
 }
 
-$phpRedisConfig = $param['class'] = 'dcb9\redis\Connection';
+$phpRedisConfig = $param['class'] = 'nuwber\yii2redis\Connection';
 $yiiRedisConfig = $param['class'] = 'yii\redis\Connection';
 
 $app = new \yii\console\Application([
@@ -24,7 +24,7 @@ $app = new \yii\console\Application([
 $count = 10000;
 echo "phpredis run SET $count times in";
 $start = microtime(true);
-/* @var $phpRedis \dcb9\redis\Connection */
+/* @var $phpRedis \nuwber\yii2redis\Connection */
 $phpRedis = Yii::$app->phpRedis;
 $phpRedis->open();
 $phpRedis->flushdb();

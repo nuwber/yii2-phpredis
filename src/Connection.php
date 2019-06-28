@@ -1,6 +1,6 @@
 <?php
 
-namespace dcb9\redis;
+namespace nuwber\yii2redis;
 
 use Redis;
 use Yii;
@@ -9,7 +9,7 @@ use RedisException;
 
 /**
  * Class Connection
- * @package dcb9\redis
+ * @package nuwber\yii2redis
  */
 class Connection extends Redis implements Configurable
 {

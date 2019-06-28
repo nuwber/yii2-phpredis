@@ -15,14 +15,14 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Either run
 
-```
-php composer.phar require --prefer-dist dcb9/yii2-phpredis
+```bash
+composer require --prefer-dist nuwber/yii2-phpredis
 ```
 
 or add
 
 ```json
-"dcb9/yii2-phpredis": "~1.0"
+"nuwber/yii2-phpredis": "^2.0"
 ```
 
 to the require section of your composer.json.
@@ -37,16 +37,16 @@ To use this extension, you have to configure the Connection class in your applic
 return [
     'components' => [
         'redis' => [
-            'class' => \dcb9\redis\Connection::class,
+            'class' => \nuwber\yii2redis\Connection::class,
             'hostname' => 'localhost',
             'port' => 6379,
             'database' => 0,
         ],
         'cache' => [
-            'class' => \dcb9\redis\Cache::class,
+            'class' => \nuwber\yii2redis\Cache::class,
         ],
         'session' => [
-            'class' => \dcb9\redis\Session::class,
+            'class' => \nuwber\yii2redis\Session::class,
         ],
     ],
 ];

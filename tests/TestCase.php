@@ -1,11 +1,11 @@
 <?php
 
-namespace dcb9\redis\tests;
+namespace nuwber\yii2redis\tests;
 
 use yii\di\Container;
 use yii\helpers\ArrayHelper;
 use Yii;
-use dcb9\redis\Connection;
+use nuwber\yii2redis\Connection;
 
 /**
  * This is the base class for all yii framework unit tests.

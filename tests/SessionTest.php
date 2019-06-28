@@ -1,10 +1,10 @@
 <?php
 
-namespace dcb9\redis\tests;
+namespace nuwber\yii2redis\tests;
 
 use Yii;
-use dcb9\redis\Connection;
-use dcb9\redis\Session;
+use nuwber\yii2redis\Connection;
+use nuwber\yii2redis\Session;
 
 class SessionTest extends TestCase
 {
