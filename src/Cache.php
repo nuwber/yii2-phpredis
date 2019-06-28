@@ -1,6 +1,6 @@
 <?php
 
-namespace dcb9\redis;
+namespace nuwber\yii2redis;
 
 use yii\di\Instance;
 

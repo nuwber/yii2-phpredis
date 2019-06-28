@@ -1,9 +1,9 @@
 <?php
 
-namespace dcb9\redis\tests;
+namespace nuwber\yii2redis\tests;
 
-use dcb9\redis\Cache;
-use dcb9\redis\Connection;
+use nuwber\yii2redis\Cache;
+use nuwber\yii2redis\Connection;
 
 class CacheTest extends TestCase
 {

@@ -1,5 +1,5 @@
 {
-  "name": "dcb9/yii2-phpredis",
+  "name": "nuwber/yii2-phpredis",
   "description": "yii2 with phpredis",
   "minimum-stability": "stable",
   "license": "BSD",
@@ -7,6 +7,10 @@
     {
       "name": "Bob Chengbin",
       "email": "bob@phpor.me"
+    },
+    {
+      "name": "Andrew",
+      "email": "a.kl@nuwber.com"
     }
   ],
   "require": {
@@ -17,8 +21,8 @@
   },
   "autoload": {
     "psr-4": {
-      "dcb9\\redis\\": "src/",
-      "dcb9\\redis\\tests\\": "tests/"
+      "nuwber\\yii2redis\\": "src/",
+      "nuwber\\yii2redis\\tests\\": "tests/"
     }
   },
   "require-dev": {

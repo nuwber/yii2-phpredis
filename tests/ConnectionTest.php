@@ -1,6 +1,6 @@
 <?php
 
-namespace dcb9\redis\tests;
+namespace nuwber\yii2redis\tests;
 
 class ConnectionTest extends TestCase
 {
