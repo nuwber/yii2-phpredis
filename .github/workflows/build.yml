@@ -18,7 +18,7 @@ jobs:
           extensions: igbinary,redis
           tools: composer
 
-      - name: Start Redis
+      - name: start redis service
         uses: supercharge/redis-github-action@1.2.0
 
       - name: install deps
@@ -27,7 +27,7 @@ jobs:
       - name: phpunit
         run: ./vendor/bin/phpunit --coverage-clover ./coverage.xml
 
-      - name: Upload Codecov coverage
+      - name: upload coverage report
         uses: codecov/codecov-action@v1
         with:
           file: './coverage.xml'

@@ -11,10 +11,8 @@
 			</testsuite>
 		</testsuites>
 		<filter>
-            <whitelist>
-				<file>./Cache.php</file>
-				<file>./Connection.php</file>
-				<file>./Session.php</file>
-            </whitelist>
+			<whitelist>
+				<directory suffix=".php">./src</directory>
+			</whitelist>
 		</filter>
 </phpunit>
