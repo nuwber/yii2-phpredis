@@ -2,7 +2,7 @@
   "name": "nuwber/yii2-phpredis",
   "description": "yii2 with phpredis",
   "minimum-stability": "stable",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "Bob Chengbin",
