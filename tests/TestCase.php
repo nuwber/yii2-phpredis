@@ -10,7 +10,7 @@ use nuwber\yii2redis\Connection;
 /**
  * This is the base class for all yii framework unit tests.
  */
-abstract class TestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     public static $params;
 
@@ -35,7 +35,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      * Clean up after test.
      * By default the application created with [[mockApplication]] will be destroyed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
         $this->destroyApplication();
@@ -81,7 +81,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
         Yii::$container = new Container();
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $params = self::getParam();
         if ($params === null) {

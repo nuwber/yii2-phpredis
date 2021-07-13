@@ -1,0 +1,8 @@
+codecov:
+  token: ffaa516c-04a1-4cb7-960f-2e017dcc29f7
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 0.5

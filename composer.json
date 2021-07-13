@@ -17,7 +17,7 @@
     "ext-json": "*",
     "yiisoft/yii2": "~2.0.14",
     "ext-redis": ">=3",
-    "php": ">=7.0"
+    "php": ">=7.2"
   },
   "autoload": {
     "psr-4": {
@@ -26,7 +26,7 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "<6.0",
+    "phpunit/phpunit": ">=8.0",
     "yiisoft/yii2-redis": "^2.0"
   },
   "repositories": [

@@ -1,0 +1,33 @@
+name: Build
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.2', '7.3', '7.4', '8.0']
+    name: Testing on PHP ${{ matrix.php-versions }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: igbinary,redis
+          tools: composer
+
+      - name: start redis service
+        uses: supercharge/redis-github-action@1.2.0
+
+      - name: install deps
+        run: composer install -o -q
+
+      - name: phpunit
+        run: ./vendor/bin/phpunit --coverage-clover ./coverage.xml
+
+      - name: upload coverage report
+        uses: codecov/codecov-action@v1
+        with:
+          file: './coverage.xml'
