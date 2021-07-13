@@ -18,6 +18,9 @@ jobs:
           extensions: igbinary,redis
           tools: composer
 
+      - name: Start Redis
+        uses: supercharge/redis-github-action@1.2.0
+
       - name: install deps
         run: composer install -o -q
 
