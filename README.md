@@ -4,6 +4,9 @@ This extension provides the [redis](http://redis.io/) key-value store support fo
 
 It includes a `Cache` and `Session` storage handler in redis.
 
+[![Build](https://github.com/nuwber/yii2-phpredis/actions/workflows/build.yml/badge.svg)](https://github.com/nuwber/yii2-phpredis/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/nuwber/yii2-phpredis/branch/master/graph/badge.svg?token=87YQF09NJ4)](https://codecov.io/gh/nuwber/yii2-phpredis)
+
 **Notice: THIS REPO DOES NOT SUPPORT ACTIVE RECORD.**
 
 Installation
